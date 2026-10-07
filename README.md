@@ -88,3 +88,36 @@ def anagram(str1, str2):
 print(anagram("hello", "HELLO"))
 Output:
 True
+
+EXPLANATION:
+
+1. 
+     How it works:
+The code takes a target integer as input from the user.
+It uses nested for loops to iterate over every possible pair (i, j) in the list l.
+The ^ operator calculates the bitwise XOR between i and j. If i ^ j equals target, the pair (i, j) is printed.
+
+2.
+     How it works:
+First Pass: The function iterates through the list to find the absolute maximum (largest) and minimum (smallest) elements.
+Second Pass: It iterates through the list again:
+To find second_largest, it checks for elements that are not equal to largest but greater than second_largest.
+To find second_smallest, it checks for elements that are not equal to smallest but smaller than second_smallest.
+Finally, it prints both values.
+
+3.
+   How it works:
+Extraction: It scans the input string text and appends all alphabetic characters (ch.isalpha()) to the letters list.
+Reversal: It reverses the letters list using .reverse().
+Reconstruction: It iterates through the original text again:
+If the character is a letter, it pops the next reversed letter from letters (letters.pop(0)).
+If it is a special character, it keeps the character as-is in its original index.
+Returning "c$b%a" from "a$b%c" demonstrates that a, b, and c were reversed to c, b, and a, while $ and % stayed in place.
+
+4.
+       How it works:
+Both input strings (str1 and str2) are converted to lowercase using .lower() to make the check case-insensitive.
+sorted() converts each string into a sorted list of individual characters.
+If both sorted lists are identical (==), the strings contain the exact same characters in different permutations, returning True.
+In the example anagram("hello", "HELLO"), both strings normalize to "hello", which sort identically to ['e', 'h', 'l', 'l', 'o'], returning True.
+   
