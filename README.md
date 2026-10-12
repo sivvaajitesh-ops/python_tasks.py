@@ -8,6 +8,7 @@ Task 1 — Find XOR Pairs
 This program accepts a list of numbers and a target value. It checks each pair and displays the pairs whose XOR result matches the given target.
 1, 2, 3, 4, 5, 6])
 CODE:
+
 def xor(l):
     target = int(input("Enter the target: "))
     
@@ -29,6 +30,8 @@ Enter the target: 3
 Task 2 — Find Second Highest and Second Lowest
 This program identifies the second highest and second lowest values from a list without arranging the elements in sorted order.
 CODE:
+
+
 def find(l):
     largest = l[0]
     smallest = l[0]
